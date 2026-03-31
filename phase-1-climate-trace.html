@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 1 — SQL & Data Wrangling with Climate TRACE</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1c28;
+    --paper: #faf8f4;
+    --warm: #f2ede4;
+    --accent: #1a6b5a;
+    --accent-light: #b8ddd4;
+    --accent-dark: #0e4a3d;
+    --rust: #b04a2f;
+    --rust-light: #e8c4b8;
+    --blue: #2c5aa0;
+    --blue-bg: #e8eef8;
+    --muted: #6b6878;
+    --border: #d8d4cc;
+    --code-bg: #1e2430;
+    --code-text: #e0e6f0;
+    --yellow-bg: #fef9ed;
+    --red-bg: #fdf0ed;
+    --green-bg: #eaf5f1;
+    --orange-bg: #fdf5ec;
+    --teal-bg: #e8f3f0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  .page { max-width: 880px; margin: 0 auto; padding: 40px 28px 100px; }
+
+  /* HEADER */
+  .course-header {
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 32px;
+    margin-bottom: 40px;
+  }
+  .phase-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); font-weight: 500; margin-bottom: 8px;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px; font-weight: 400; line-height: 1.15; margin-bottom: 12px;
+  }
+  .header-meta {
+    display: flex; gap: 24px; flex-wrap: wrap; font-size: 14px; color: var(--muted);
+  }
+  .header-meta span { display: flex; align-items: center; gap: 6px; }
+
+  /* DARK BOXES */
+  .overview {
+    background: var(--ink); color: var(--paper);
+    padding: 32px 36px; margin-bottom: 40px; position: relative; overflow: hidden;
+  }
+  .overview h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-weight: 400; margin-bottom: 16px; color: var(--accent-light);
+  }
+  .overview p { font-size: 14px; line-height: 1.75; opacity: 0.88; margin-bottom: 10px; }
+
+  .objectives-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+  .objective {
+    font-size: 13px; padding: 10px 14px; border-left: 2px solid var(--accent); opacity: 0.9;
+  }
+  .objective strong {
+    display: block; font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+    color: var(--accent-light); margin-bottom: 3px;
+  }
+
+  /* DATA SECTION */
+  .data-section {
+    background: var(--green-bg); border-left: 3px solid var(--accent);
+    padding: 24px 28px; margin-bottom: 40px;
+  }
+  .data-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; margin-bottom: 12px; color: var(--accent-dark);
+  }
+  .data-section p { font-size: 14px; line-height: 1.7; color: #2a2a2a; margin-bottom: 8px; }
+
+  .file-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
+  .file-card {
+    background: white; padding: 14px 16px; border: 1px solid var(--border);
+  }
+  .file-card strong {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    color: var(--accent-dark); display: block; margin-bottom: 4px;
+  }
+  .file-card .desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .file-card .cols {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: #888; margin-top: 6px;
+  }
+
+  /* SETUP */
+  .setup-section {
+    background: var(--teal-bg); border-left: 3px solid var(--accent);
+    padding: 24px 28px; margin-bottom: 40px;
+  }
+  .setup-section h2 {
+    font-family: 'Playfair Display', serif; font-size: 20px;
+    margin-bottom: 12px; color: var(--accent);
+  }
+  .setup-section p, .setup-section li { font-size: 14px; line-height: 1.7; color: #2a2a2a; }
+  .setup-list { list-style: none; margin-top: 12px; }
+  .setup-list li { padding: 6px 0 6px 20px; position: relative; }
+  .setup-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 600; }
+
+  /* WEEKS */
+  .week { margin-bottom: 52px; border-top: 2px solid var(--ink); padding-top: 24px; }
+  .week-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+  .week-num {
+    font-family: 'Playfair Display', serif; font-size: 48px;
+    color: var(--accent); opacity: 0.25; line-height: 1; min-width: 65px;
+  }
+  .week-title-block { flex: 1; }
+  .week-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; }
+  .week-hours {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: var(--accent); letter-spacing: 1px; text-transform: uppercase;
+  }
+  .week-intro { color: var(--muted); font-size: 14px; margin: 8px 0 20px; font-weight: 300; }
+
+  /* LEARNING OBJECTIVES */
+  .lo-box { background: var(--blue-bg); padding: 16px 20px; margin-bottom: 20px; }
+  .lo-box h4 {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 1.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 8px;
+  }
+  .lo-list { list-style: none; font-size: 14px; }
+  .lo-list li { padding: 3px 0 3px 22px; position: relative; line-height: 1.6; }
+  .lo-list li::before { content: '✓'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+
+  /* CONTENT */
+  .content-block { margin-bottom: 20px; }
+  .content-block h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .topic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+  .topic { background: white; padding: 12px 16px; border-left: 2px solid var(--border); font-size: 13px; }
+  .topic strong { display: block; font-size: 13px; margin-bottom: 2px; }
+  .topic .detail { color: var(--muted); font-size: 12px; }
+
+  /* CODE */
+  .sql-block {
+    background: var(--code-bg); color: var(--code-text);
+    padding: 18px 22px; margin: 12px 0;
+    font-family: 'JetBrains Mono', monospace; font-size: 12.5px;
+    line-height: 1.65; overflow-x: auto; border-radius: 2px; position: relative;
+    white-space: pre; 
+  }
+  .sql-block .lang-tag {
+    position: absolute; top: 8px; right: 12px;
+    font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 1px;
+  }
+  .kw { color: #c792ea; } .fn { color: #82aaff; } .str { color: #c3e88d; }
+  .cm { color: #676e95; font-style: italic; } .num { color: #f78c6c; }
+
+  /* EXERCISES */
+  .exercise-set { margin: 20px 0; }
+  .exercise-set > h3 { font-size: 15px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .exercise {
+    background: white; border: 1px solid var(--border);
+    padding: 16px 20px; margin-bottom: 10px; position: relative;
+  }
+  .exercise .diff {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px;
+    border-radius: 2px; position: absolute; top: 12px; right: 12px;
+  }
+  .diff-warm { background: var(--green-bg); color: var(--accent); }
+  .diff-stretch { background: var(--yellow-bg); color: #9a7b1a; }
+  .diff-challenge { background: var(--red-bg); color: var(--rust); }
+  .exercise h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; padding-right: 80px; }
+  .exercise p { font-size: 13px; line-height: 1.65; color: #444; }
+  .exercise .hint { margin-top: 8px; font-size: 12px; color: var(--muted); font-style: italic; }
+
+  /* TEACHER NOTE */
+  .teacher-note {
+    background: #f4f0f8; border-left: 3px solid #8b5fbf;
+    padding: 16px 20px; margin: 16px 0; font-size: 13px; line-height: 1.65; color: #444;
+  }
+  .teacher-note strong {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 1px; text-transform: uppercase; color: #7040a0; display: block; margin-bottom: 4px;
+  }
+
+  /* MILESTONE */
+  .milestone {
+    background: var(--ink); color: var(--paper); padding: 24px 28px; margin: 24px 0;
+  }
+  .milestone h3 {
+    font-family: 'Playfair Display', serif; font-size: 18px;
+    font-weight: 400; color: var(--accent-light); margin-bottom: 8px;
+  }
+  .milestone p { font-size: 14px; opacity: 0.85; line-height: 1.65; }
+  .check-list { list-style: none; margin-top: 12px; }
+  .check-list li {
+    padding: 4px 0 4px 24px; position: relative; font-size: 13px; opacity: 0.85;
+  }
+  .check-list li::before { content: '□'; position: absolute; left: 0; font-size: 14px; }
+
+  /* RESOURCES */
+  .resources { background: white; border: 1px solid var(--border); padding: 20px 24px; margin: 16px 0; }
+  .resources h4 {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+  }
+  .resource-item { padding: 6px 0; font-size: 13px; display: flex; gap: 8px; align-items: baseline; }
+  .resource-item .type {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    padding: 1px 6px; background: var(--warm); color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
+  }
+
+  /* PROJECT */
+  .project { border: 2px solid var(--accent); padding: 28px 32px; margin: 32px 0; }
+  .project h3 {
+    font-family: 'Playfair Display', serif; font-size: 22px;
+    font-weight: 400; margin-bottom: 12px; color: var(--accent-dark);
+  }
+  .project p { font-size: 14px; line-height: 1.7; margin-bottom: 10px; }
+  .project .deliverables { list-style: none; margin-top: 16px; border-top: 1px solid var(--border); padding-top: 16px; }
+  .project .deliverables li { padding: 4px 0 4px 24px; position: relative; font-size: 13px; }
+  .project .deliverables li::before { content: '📄'; position: absolute; left: 0; }
+
+  /* SCHEMA DIAGRAM */
+  .schema-box {
+    background: white; border: 1px solid var(--border);
+    padding: 24px; margin: 20px 0; overflow-x: auto;
+  }
+  .schema-box h4 {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent-dark); margin-bottom: 16px;
+  }
+  .schema-tables { display: flex; gap: 12px; flex-wrap: wrap; }
+  .schema-table {
+    border: 1px solid var(--border); min-width: 180px; flex: 1;
+  }
+  .schema-table .t-name {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    font-weight: 500; padding: 8px 12px; background: var(--accent-dark); color: white;
+  }
+  .schema-table .t-col {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    padding: 3px 12px; border-top: 1px solid #eee; color: #555;
+  }
+  .schema-table .t-col.pk { color: var(--accent-dark); font-weight: 500; }
+  .schema-table .t-col.fk { color: var(--blue); }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 28px; }
+    .objectives-grid, .topic-grid, .file-grid { grid-template-columns: 1fr; }
+    .week-num { font-size: 36px; min-width: 45px; }
+    .overview, .milestone { padding: 20px 22px; }
+    .schema-tables { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <div class="course-header">
+    <div class="phase-label">Phase 01 of 04 · Climate TRACE Edition</div>
+    <h1>SQL & Data Wrangling<br>with Global Emissions Data</h1>
+    <div class="header-meta">
+      <span>📅 Weeks 1–5</span>
+      <span>⏱️ ~10 hrs/week</span>
+      <span>📊 ~50 hours total</span>
+      <span>🌍 Dataset: Climate TRACE v5.5</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ OVERVIEW ═══════════ -->
+  <div class="overview">
+    <h2>Phase Objectives</h2>
+    <p>By the end of Phase 1, you will be able to take Climate TRACE's real-world emissions data — millions of rows, multiple related files, messy nulls, and inconsistent formats — and extract structured answers about who emits what, where, and how it's changing. You'll write SQL that's clean enough for a code review and wrangle data in Python when SQL isn't enough.</p>
+    <p>Everything you build here carries forward. The database you construct in Phase 1 becomes the foundation for dbt modelling in Phase 2, dashboards in Phase 3, and AI-augmented analysis in Phase 4.</p>
+
+    <div class="objectives-grid">
+      <div class="objective">
+        <strong>OBJ-1</strong>
+        Write multi-CTE SQL queries with window functions, joins, and conditional logic to answer emissions questions from relational data.
+      </div>
+      <div class="objective">
+        <strong>OBJ-2</strong>
+        Clean and reshape Climate TRACE CSVs using Python (pandas), handling nulls, type mismatches, multi-gas rows, and inconsistent units.
+      </div>
+      <div class="objective">
+        <strong>OBJ-3</strong>
+        Design and populate a local SQL database from multiple Climate TRACE files, understanding how source_id links emissions, ownership, and confidence data.
+      </div>
+      <div class="objective">
+        <strong>OBJ-4</strong>
+        Produce analysis-ready outputs (clean CSVs, summary tables, initial charts) that answer real questions about Denmark's and Europe's emissions.
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ DATA ═══════════ -->
+  <div class="data-section">
+    <h2>🌍 Your Dataset: Climate TRACE</h2>
+    <p>Climate TRACE is the most comprehensive facility-level global emissions inventory ever created. It tracks greenhouse gas emissions from 2.7 million sources across 744 million assets, using satellite imagery and machine learning. The data is free, Creative Commons licensed, and updated monthly.</p>
+    <p>You'll download sector packages from <strong>climatetrace.org/data</strong>. Each package contains four CSV files that form a natural relational database:</p>
+
+    <div class="file-grid">
+      <div class="file-card">
+        <strong>emissions_sources.csv</strong>
+        <div class="desc">Facility-level emissions. One row per source × gas × time period. The core fact table.</div>
+        <div class="cols">source_id · source_name · iso3_country · sector · subsector · gas · emissions_quantity · lat · lon · capacity · activity</div>
+      </div>
+      <div class="file-card">
+        <strong>country_emissions.csv</strong>
+        <div class="desc">Country-level aggregates by subsector and gas. Smaller, cleaner — ideal for learning.</div>
+        <div class="cols">iso3_country · sector · subsector · gas · emissions_quantity · start_time · end_time</div>
+      </div>
+      <div class="file-card">
+        <strong>confidence.csv</strong>
+        <div class="desc">Data quality ratings (very high → very low) per source. Teaches you to question your data.</div>
+        <div class="cols">source_id · source_type · capacity · activity · [gas]_emissions · total_co2e_100gwp</div>
+      </div>
+      <div class="file-card">
+        <strong>ownership.csv</strong>
+        <div class="desc">Who owns each facility. Ownership chains, parent companies, share percentages.</div>
+        <div class="cols">source_id · parent_name · parent_entity_type · overall_share_percent · ownership_path</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="schema-box">
+    <h4>Relational Schema — How the Files Connect</h4>
+    <div class="schema-tables">
+      <div class="schema-table">
+        <div class="t-name">emissions_sources</div>
+        <div class="t-col pk">🔑 source_id</div>
+        <div class="t-col">source_name</div>
+        <div class="t-col">iso3_country</div>
+        <div class="t-col">sector / subsector</div>
+        <div class="t-col">gas</div>
+        <div class="t-col">emissions_quantity</div>
+        <div class="t-col">lat / lon</div>
+        <div class="t-col">capacity / activity</div>
+        <div class="t-col">start_time / end_time</div>
+      </div>
+      <div class="schema-table">
+        <div class="t-name">country_emissions</div>
+        <div class="t-col">iso3_country</div>
+        <div class="t-col">sector / subsector</div>
+        <div class="t-col">gas</div>
+        <div class="t-col">emissions_quantity</div>
+        <div class="t-col">start_time / end_time</div>
+      </div>
+      <div class="schema-table">
+        <div class="t-name">confidence</div>
+        <div class="t-col fk">🔗 source_id</div>
+        <div class="t-col">source_type (quality)</div>
+        <div class="t-col">capacity (quality)</div>
+        <div class="t-col">activity (quality)</div>
+        <div class="t-col">[gas]_emissions (quality)</div>
+      </div>
+      <div class="schema-table">
+        <div class="t-name">ownership</div>
+        <div class="t-col fk">🔗 source_id</div>
+        <div class="t-col">parent_name</div>
+        <div class="t-col">parent_entity_type</div>
+        <div class="t-col">overall_share_percent</div>
+        <div class="t-col">ownership_path</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SETUP ═══════════ -->
+  <div class="setup-section">
+    <h2>🛠 Environment Setup (Do Before Week 1)</h2>
+    <p>Spend 1–2 hours getting your tools ready.</p>
+    <ul class="setup-list">
+      <li><strong>Download Climate TRACE data:</strong> Go to climatetrace.org/data. Download the <strong>Power</strong> sector package (by sector). Also download <strong>Denmark</strong> (by country) for a smaller starting point. Unzip both.</li>
+      <li><strong>SQL environment:</strong> Install DuckDB (recommended — handles CSVs natively, no server needed) or PostgreSQL. DuckDB lets you query CSVs directly without loading them first, which is perfect for exploration.</li>
+      <li><strong>Python environment:</strong> Install Python 3.11+ and JupyterLab. Or use Google Colab for zero setup. Install pandas, duckdb (pip install duckdb).</li>
+      <li><strong>Code editor:</strong> VS Code with Python and SQL extensions.</li>
+      <li><strong>GitHub repo:</strong> Create a repo called <code>climate-trace-analytics</code>. Every exercise goes here. This becomes your portfolio.</li>
+      <li><strong>Optional context:</strong> Skim the Climate TRACE FAQs page and the data guide PDF to understand what you're working with.</li>
+    </ul>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                WEEK 1                   -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="week">
+    <div class="week-header">
+      <div class="week-num">W1</div>
+      <div class="week-title-block">
+        <div class="week-title">SQL Fundamentals on Country-Level Emissions</div>
+        <div class="week-hours">10 hours · 4 sessions</div>
+      </div>
+    </div>
+    <p class="week-intro">Start with the smaller, cleaner country_emissions.csv. The goal this week is to think in rows and filters while exploring real emissions data. By Friday, you should be able to pull exactly the data you need from a database and have formed your first impressions of global emission patterns.</p>
+
+    <div class="lo-box">
+      <h4>Learning Objectives</h4>
+      <ul class="lo-list">
+        <li>Load a CSV into DuckDB and write SELECT queries with WHERE, AND/OR, IN, BETWEEN, LIKE</li>
+        <li>Sort and limit results with ORDER BY and LIMIT</li>
+        <li>Understand data types and why the gas column changes the meaning of emissions_quantity</li>
+        <li>Handle NULL values correctly (Climate TRACE uses NULL to mean "data not yet available")</li>
+        <li>Explain the difference between CO2, CH4, N2O, and co2e_100yr in the dataset</li>
+      </ul>
+    </div>
+
+    <div class="content-block">
+      <h3>📖 Core Concepts</h3>
+      <div class="topic-grid">
+        <div class="topic">
+          <strong>SELECT ... FROM ... WHERE</strong>
+          <div class="detail">The fundamental query. Every SQL query starts here. Practice filtering by country (iso3_country = 'DNK'), sector, and gas type.</div>
+        </div>
+        <div class="topic">
+          <strong>Filtering operators</strong>
+          <div class="detail">=, !=, >, IN ('DNK','SWE','NOR'), BETWEEN '2020-01-01' AND '2023-12-31', LIKE '%coal%', IS NULL</div>
+        </div>
+        <div class="topic">
+          <strong>NULL semantics</strong>
+          <div class="detail">In Climate TRACE: NULL = "not yet available", 0 = "this gas is not emitted." Critical distinction. NULL ≠ 0. Always use IS NULL, never = NULL.</div>
+        </div>
+        <div class="topic">
+          <strong>Data types & the gas column</strong>
+          <div class="detail">The same source has multiple rows — one per gas (CO2, CH4, N2O, co2e_100yr). Filtering by gas is essential or you'll double/triple count.</div>
+        </div>
+        <div class="topic">
+          <strong>DuckDB CSV loading</strong>
+          <div class="detail">SELECT * FROM read_csv_auto('file.csv'). Or CREATE TABLE emissions AS SELECT * FROM read_csv_auto('file.csv'). DuckDB reads CSVs natively.</div>
+        </div>
+        <div class="topic">
+          <strong>Sorting & limiting</strong>
+          <div class="detail">ORDER BY emissions_quantity DESC LIMIT 20. "Show me the top 20 emitting countries." The simplest useful query.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sql-block"><span class="lang-tag">DuckDB</span>
+<span class="cm">-- Load the country emissions CSV directly in DuckDB</span>
+<span class="kw">CREATE TABLE</span> country_emissions <span class="kw">AS</span>
+<span class="kw">SELECT</span> * <span class="kw">FROM</span> <span class="fn">read_csv_auto</span>(<span class="str">'power_country_emissions.csv'</span>);
+
+<span class="cm">-- First look: what do we have?</span>
+<span class="kw">SELECT</span> <span class="fn">COUNT</span>(*) <span class="kw">AS</span> total_rows,
+       <span class="fn">COUNT</span>(<span class="kw">DISTINCT</span> iso3_country) <span class="kw">AS</span> countries,
+       <span class="fn">COUNT</span>(<span class="kw">DISTINCT</span> subsector) <span class="kw">AS</span> subsectors,
+       <span class="fn">COUNT</span>(<span class="kw">DISTINCT</span> gas) <span class="kw">AS</span> gas_types,
+       <span class="fn">MIN</span>(start_time) <span class="kw">AS</span> earliest,
+       <span class="fn">MAX</span>(end_time) <span class="kw">AS</span> latest
+<span class="kw">FROM</span> country_emissions;
+
+<span class="cm">-- Denmark's power sector CO2 emissions by year</span>
+<span class="kw">SELECT</span> iso3_country, subsector, gas,
+       <span class="fn">YEAR</span>(start_time::DATE) <span class="kw">AS</span> year,
+       emissions_quantity
+<span class="kw">FROM</span> country_emissions
+<span class="kw">WHERE</span> iso3_country = <span class="str">'DNK'</span>
+  <span class="kw">AND</span> gas = <span class="str">'co2'</span>
+  <span class="kw">AND</span> temporal_granularity = <span class="str">'annual'</span>
+<span class="kw">ORDER BY</span> year;</div>
+
+    <div class="teacher-note">
+      <strong>🧑‍🏫 Teaching note — why country_emissions first?</strong>
+      The source-level emissions file has millions of rows and multiple rows per source per gas per time period. Starting there would overwhelm a beginner. The country_emissions file is a pre-aggregated summary — small enough to see patterns, but structured identically to the big file. It teaches the same SQL without the data engineering headaches. We introduce the full source-level data in Week 3.
+    </div>
+
+    <div class="exercise-set">
+      <h3>✏️ Exercises</h3>
+
+      <div class="exercise">
+        <span class="diff diff-warm">Warm-up</span>
+        <h4>E1.1 — Get Oriented</h4>
+        <p>Load the Power sector <code>country_emissions.csv</code> into DuckDB. Answer: How many rows? How many distinct countries? What gas types exist? What subsectors exist within "Power"? What date range does the data cover? How many rows have NULL emissions_quantity — and for which gases?</p>
+        <div class="hint">Hint: COUNT(*) vs COUNT(emissions_quantity) behaves differently with NULLs — that's the first lesson.</div>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-warm">Warm-up</span>
+        <h4>E1.2 — Denmark's Power Emissions</h4>
+        <p>Write a query that returns all annual CO2 emissions rows for Denmark (DNK), sorted by year. Then modify it to show only years where emissions exceeded 10 million metric tonnes. Then show the same for co2e_100yr instead of co2 — what's the difference and why?</p>
+        <div class="hint">co2e_100yr = CO2-equivalent using 100-year global warming potential. It includes CH4 and N2O converted to CO2 terms. This is the standard metric for climate comparisons.</div>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-stretch">Stretch</span>
+        <h4>E1.3 — Comparing Nordic Countries</h4>
+        <p>Find the total annual co2e_100yr emissions from the Power sector for Denmark (DNK), Sweden (SWE), Norway (NOR), and Finland (FIN) for the most recent full year available. Which country emits the most from power generation? Which the least? Can you hypothesise why based on what you know about their energy mixes?</p>
+        <div class="hint">Use IN ('DNK','SWE','NOR','FIN'). Write a few sentences of interpretation after your query — analysts explain numbers, they don't just produce them.</div>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-stretch">Stretch</span>
+        <h4>E1.4 — The Gas Column Trap</h4>
+        <p>Write a query that sums ALL emissions_quantity for Denmark's Power sector in 2023, without filtering by gas. What happens? Now filter to only <code>gas = 'co2e_100yr'</code> and compare. Write a comment in your SQL explaining why not filtering by gas gives a meaningless number.</p>
+        <div class="hint">This is the most important data quality lesson in Climate TRACE: each source has separate rows for CO2, CH4, N2O, co2e_100yr, and co2e_20yr. If you sum them all, you're counting emissions multiple times.</div>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-challenge">Challenge</span>
+        <h4>E1.5 — "Which Sectors Should Denmark Focus On?"</h4>
+        <p>Download Denmark's complete country data (all sectors, not just Power). Load all the country_emissions CSVs. Write a query that answers: <em>"Across all sectors, where do Denmark's co2e_100yr emissions come from? Rank the sectors by their 2023 emissions."</em> Write your query, then write a 3-sentence summary a minister could read.</p>
+        <div class="hint">You may need to UNION multiple CSVs or load them all into one table. DuckDB can read multiple files: read_csv_auto('*_country_emissions.csv'). Make sure you filter to co2e_100yr and annual granularity.</div>
+      </div>
+    </div>
+
+    <div class="resources">
+      <h4>Resources</h4>
+      <div class="resource-item"><span class="type">Free</span> SQLBolt.com — Interactive SQL lessons 1–6 (do alongside Climate TRACE exercises)</div>
+      <div class="resource-item"><span class="type">Free</span> DuckDB documentation — "Importing Data" and "CSV Import" sections</div>
+      <div class="resource-item"><span class="type">Ref</span> Climate TRACE FAQs — climatetrace.org/faqs (understand the data before querying it)</div>
+      <div class="resource-item"><span class="type">Ref</span> Climate TRACE Data Guide PDF (schema definitions, units, gas types)</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                WEEK 2                   -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="week">
+    <div class="week-header">
+      <div class="week-num">W2</div>
+      <div class="week-title-block">
+        <div class="week-title">Aggregation, Grouping & Conditional Logic</div>
+        <div class="week-hours">10 hours · 4 sessions</div>
+      </div>
+    </div>
+    <p class="week-intro">This is where SQL goes from "selecting rows" to "answering questions." GROUP BY is the single most-used SQL pattern in analytics. This week you'll aggregate emissions across countries, sectors, and time periods to produce the kind of summary tables that show up in climate reports.</p>
+
+    <div class="lo-box">
+      <h4>Learning Objectives</h4>
+      <ul class="lo-list">
+        <li>Use aggregate functions: COUNT, SUM, AVG, MIN, MAX — and understand how each handles NULLs</li>
+        <li>Group results with GROUP BY and filter groups with HAVING</li>
+        <li>Write CASE WHEN for categorisation (e.g., emission size buckets, sector groupings)</li>
+        <li>Combine multiple aggregations in a single query (conditional aggregation pattern)</li>
+        <li>Understand the difference between WHERE (filters rows) and HAVING (filters groups)</li>
+      </ul>
+    </div>
+
+    <div class="content-block">
+      <h3>📖 Core Concepts</h3>
+      <div class="topic-grid">
+        <div class="topic">
+          <strong>Aggregate functions</strong>
+          <div class="detail">SUM(emissions_quantity) to get totals. AVG for averages. COUNT(DISTINCT iso3_country) for unique countries. All ignore NULLs except COUNT(*).</div>
+        </div>
+        <div class="topic">
+          <strong>GROUP BY</strong>
+          <div class="detail">Every non-aggregated column in SELECT must be in GROUP BY. Think: "for each [country], calculate [total emissions]."</div>
+        </div>
+        <div class="topic">
+          <strong>HAVING vs WHERE</strong>
+          <div class="detail">WHERE filters rows before grouping. HAVING filters groups after. "Countries WHERE region = 'Europe'" vs "Countries HAVING SUM(emissions) > 1000000".</div>
+        </div>
+        <div class="topic">
+          <strong>CASE WHEN</strong>
+          <div class="detail">SQL's if/else. Create emission size categories, flag countries above thresholds, or do conditional aggregation (the secret weapon).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sql-block"><span class="lang-tag">SQL — Conditional aggregation on emissions</span>
+<span class="cm">-- "For each country, how much comes from electricity vs heat generation?"</span>
+<span class="kw">SELECT</span>
+    iso3_country,
+    <span class="fn">SUM</span>(<span class="kw">CASE WHEN</span> subsector = <span class="str">'electricity-generation'</span>
+         <span class="kw">THEN</span> emissions_quantity <span class="kw">ELSE</span> <span class="num">0</span> <span class="kw">END</span>) <span class="kw">AS</span> electricity_co2e,
+    <span class="fn">SUM</span>(<span class="kw">CASE WHEN</span> subsector = <span class="str">'heat-plants'</span>
+         <span class="kw">THEN</span> emissions_quantity <span class="kw">ELSE</span> <span class="num">0</span> <span class="kw">END</span>) <span class="kw">AS</span> heat_co2e,
+    <span class="fn">SUM</span>(emissions_quantity) <span class="kw">AS</span> total_co2e
+<span class="kw">FROM</span> country_emissions
+<span class="kw">WHERE</span> gas = <span class="str">'co2e_100yr'</span>
+  <span class="kw">AND</span> temporal_granularity = <span class="str">'annual'</span>
+  <span class="kw">AND</span> <span class="fn">YEAR</span>(start_time::DATE) = <span class="num">2023</span>
+<span class="kw">GROUP BY</span> iso3_country
+<span class="kw">HAVING</span> <span class="fn">SUM</span>(emissions_quantity) > <span class="num">1000000</span>
+<span class="kw">ORDER BY</span> total_co2e <span class="kw">DESC</span>
+<span class="kw">LIMIT</span> <span class="num">20</span>;</div>
+
+    <div class="exercise-set">
+      <h3>✏️ Exercises</h3>
+
+      <div class="exercise">
+        <span class="diff diff-warm">Warm-up</span>
+        <h4>E2.1 — Global Top Emitters</h4>
+        <p>Using country_emissions for the Power sector: what are the top 20 countries by total co2e_100yr emissions in 2023? What's the global total? What percentage do the top 5 countries represent?</p>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-warm">Warm-up</span>
+        <h4>E2.2 — Year-over-Year Totals</h4>
+        <p>Calculate total global Power sector co2e_100yr emissions per year (2015–2024). Are emissions going up or down? Which year had the biggest drop? (You'll likely spot COVID-19 in the data.)</p>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-stretch">Stretch</span>
+        <h4>E2.3 — Emissions Intensity Categories</h4>
+        <p>Using CASE WHEN, categorise every country's 2023 Power emissions into: "Heavy" (>100M tonnes co2e), "Moderate" (10M–100M), "Light" (1M–10M), "Minimal" (<1M). How many countries fall into each category? Which category is Denmark in? Which are its Nordic neighbours in?</p>
+        <div class="hint">This teaches the CASE WHEN + GROUP BY pattern. Create the categories first, then count countries per category.</div>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-stretch">Stretch</span>
+        <h4>E2.4 — Gas Breakdown per Country</h4>
+        <p>For the Nordic countries, create a single query that shows — for each country, for 2023 — the total CO2, total CH4, and total N2O emissions side by side (conditional aggregation). Which country has the highest methane emissions from power? Why might that be?</p>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-challenge">Challenge</span>
+        <h4>E2.5 — The Pivot Report</h4>
+        <p>Produce a table that a climate analyst could present: rows = Nordic countries, columns = years (2019–2023), values = total co2e_100yr from Power. This is a manual pivot using SUM(CASE WHEN year = 2019 THEN ... END). Add a final column showing the percentage change from 2019 to 2023. Who's decarbonising their power sector fastest?</p>
+        <div class="hint">The manual pivot pattern is ugly but essential. SUM(CASE WHEN YEAR(start_time::DATE) = 2019 THEN emissions_quantity END) AS "2019".</div>
+      </div>
+    </div>
+
+    <div class="resources">
+      <h4>Resources</h4>
+      <div class="resource-item"><span class="type">Free</span> SQLBolt.com — Lessons 7–10 (aggregation)</div>
+      <div class="resource-item"><span class="type">Drill</span> HackerRank SQL — "Aggregation" problem set (generic practice alongside Climate TRACE)</div>
+      <div class="resource-item"><span class="type">Read</span> Climate TRACE Sectors page — understand what "electricity-generation" vs "heat-plants" means</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                WEEK 3                   -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="week">
+    <div class="week-header">
+      <div class="week-num">W3</div>
+      <div class="week-title-block">
+        <div class="week-title">JOINs & Multi-Table Emissions Analysis</div>
+        <div class="week-hours">10 hours · 4 sessions</div>
+      </div>
+    </div>
+    <p class="week-intro">Now we bring in the full source-level data. This is where it gets real: you'll connect emissions data with ownership and confidence data using JOINs. The questions get much more interesting — "Which companies own the dirtiest power plants in Europe?" requires data from multiple tables.</p>
+
+    <div class="teacher-note">
+      <strong>🧑‍🏫 Teaching note — the jump in complexity</strong>
+      The source-level emissions file is much larger than country_emissions. Each facility has multiple rows (one per gas per time period). The ownership file has its own structure, with multiple owners per source. This week is intentionally harder — JOINs are where SQL becomes a data integration language, and Climate TRACE's multi-file structure is the perfect training ground.
+    </div>
+
+    <div class="lo-box">
+      <h4>Learning Objectives</h4>
+      <ul class="lo-list">
+        <li>Understand and use INNER JOIN, LEFT JOIN, and their behaviour with one-to-many relationships</li>
+        <li>Join emissions_sources to ownership and confidence tables on source_id</li>
+        <li>Write subqueries in WHERE, FROM, and SELECT clauses</li>
+        <li>Debug accidental row multiplication when joining multi-row tables</li>
+        <li>Understand the source_id as the key that links the Climate TRACE universe</li>
+      </ul>
+    </div>
+
+    <div class="content-block">
+      <h3>📖 Core Concepts</h3>
+      <div class="topic-grid">
+        <div class="topic">
+          <strong>INNER JOIN</strong>
+          <div class="detail">Only sources that have ownership data. Use: "power plants WHERE we know who owns them."</div>
+        </div>
+        <div class="topic">
+          <strong>LEFT JOIN</strong>
+          <div class="detail">All sources + ownership where available, NULLs where not. The analyst's workhorse. "Show all plants, flag those with unknown owners."</div>
+        </div>
+        <div class="topic">
+          <strong>Row multiplication trap</strong>
+          <div class="detail">One source can have multiple owners (shared ownership). JOIN without care = inflated emissions. Always check COUNT before and after.</div>
+        </div>
+        <div class="topic">
+          <strong>Subqueries</strong>
+          <div class="detail">A query inside another. "Sources whose emissions are above the average" needs a subquery for the average. Think of them as intermediate calculations.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sql-block"><span class="lang-tag">SQL — Joining emissions with ownership</span>
+<span class="cm">-- "Top 20 parent companies by total CO2 emissions from European power plants"</span>
+<span class="kw">SELECT</span>
+    o.parent_name,
+    <span class="fn">COUNT</span>(<span class="kw">DISTINCT</span> e.source_id) <span class="kw">AS</span> num_facilities,
+    <span class="fn">ROUND</span>(<span class="fn">SUM</span>(e.emissions_quantity) / <span class="num">1e6</span>, <span class="num">2</span>) <span class="kw">AS</span> total_co2_mt
+<span class="kw">FROM</span> emissions_sources e
+<span class="kw">INNER JOIN</span> ownership o
+    <span class="kw">ON</span> e.source_id = o.source_id
+<span class="kw">WHERE</span> e.gas = <span class="str">'co2'</span>
+  <span class="kw">AND</span> e.temporal_granularity = <span class="str">'annual'</span>
+  <span class="kw">AND</span> <span class="fn">YEAR</span>(e.start_time::DATE) = <span class="num">2023</span>
+  <span class="kw">AND</span> e.iso3_country <span class="kw">IN</span> (<span class="str">'DNK'</span>,<span class="str">'DEU'</span>,<span class="str">'POL'</span>,<span class="str">'SWE'</span>,<span class="str">'NOR'</span>,<span class="str">'FIN'</span>)
+<span class="kw">GROUP BY</span> o.parent_name
+<span class="kw">ORDER BY</span> total_co2_mt <span class="kw">DESC</span>
+<span class="kw">LIMIT</span> <span class="num">20</span>;</div>
+
+    <div class="exercise-set">
+      <h3>✏️ Exercises</h3>
+
+      <div class="exercise">
+        <span class="diff diff-warm">Warm-up</span>
+        <h4>E3.1 — Explore the Source-Level Schema</h4>
+        <p>Load the Power sector <code>emissions_sources.csv</code>. Before writing any analysis: How many rows? How many distinct source_ids? How many rows per source_id on average (and why is it more than 1)? What source_types exist? Draw the relationships between the four CSV files on paper.</p>
+        <div class="hint">Each source has rows for each gas type AND each time period. A single power plant might have 30+ rows. Understanding this structure is essential before JOINing.</div>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-warm">Warm-up</span>
+        <h4>E3.2 — Denmark's Power Plants</h4>
+        <p>List all power generation sources in Denmark with their 2023 annual co2e_100yr emissions, source_name, source_type, and capacity. Sort by emissions descending. How many power plants does Denmark have in the dataset? Which is the largest emitter?</p>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-stretch">Stretch</span>
+        <h4>E3.3 — Who Owns Denmark's Emissions?</h4>
+        <p>JOIN emissions_sources with ownership on source_id. For Denmark's power sector in 2023 (co2e_100yr, annual), show: parent_name, number of facilities, total emissions. Who are the top 5 owners? Check: does the total match what you got without the JOIN? If not, investigate why (shared ownership = row multiplication).</p>
+        <div class="hint">The ownership table can have multiple rows per source_id (shared ownership). Use overall_share_percent to weight emissions correctly, or deduplicate.</div>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-stretch">Stretch</span>
+        <h4>E3.4 — Data Quality Check with Confidence</h4>
+        <p>LEFT JOIN emissions_sources with confidence. For Danish power plants: how many have "high" or "very high" confidence vs "low" or "very low"? What percentage of Denmark's total emissions come from high-confidence sources? This is a real data quality assessment — include it in your project README.</p>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-challenge">Challenge</span>
+        <h4>E3.5 — European Polluter Leaderboard</h4>
+        <p>Build a query that answers: <em>"Which 20 individual power plants in Europe emitted the most CO2 in 2023, and who owns them?"</em> Include: source_name, country, source_type, co2 emissions (in million tonnes), parent company name. You'll need to define "Europe" (pick EU27 ISO codes or a broader set — document your choice), join three tables, and handle the gas/time filtering carefully.</p>
+        <div class="hint">This is a real Climate TRACE use case. Your result should be a table that a journalist could use in an article. Double-check your numbers make sense — a single power plant emitting 1 billion tonnes would be a bug, not a discovery.</div>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <h3>📍 Mid-Phase Check-in</h3>
+      <p>You're halfway through Phase 1. At this point you should be able to:</p>
+      <ul class="check-list">
+        <li>Write a multi-table JOIN query against Climate TRACE data without syntax errors</li>
+        <li>Explain why the same source_id appears in multiple rows and how to handle it</li>
+        <li>Check row counts before and after a JOIN to catch multiplication bugs</li>
+        <li>Name Denmark's top 3 power sector emitters and who owns them, from memory</li>
+      </ul>
+      <p style="margin-top: 12px; opacity: 0.7;">If any of these feel shaky, redo Week 3 exercises before moving on. Week 4 builds directly on JOIN fluency.</p>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                WEEK 4                   -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="week">
+    <div class="week-header">
+      <div class="week-num">W4</div>
+      <div class="week-title-block">
+        <div class="week-title">Advanced SQL: CTEs & Window Functions</div>
+        <div class="week-hours">10 hours · 4 sessions</div>
+      </div>
+    </div>
+    <p class="week-intro">This is the week that separates "I know SQL" from "I'm good at SQL." CTEs make complex queries readable; window functions let you calculate rankings, trends, and running totals without leaving SQL. Every senior analyst job listing tests for these skills.</p>
+
+    <div class="lo-box">
+      <h4>Learning Objectives</h4>
+      <ul class="lo-list">
+        <li>Write Common Table Expressions (CTEs) with WITH to break queries into named, readable steps</li>
+        <li>Use window functions: ROW_NUMBER, RANK, DENSE_RANK, NTILE for ranking</li>
+        <li>Use LAG and LEAD for year-over-year emissions comparisons</li>
+        <li>Calculate running totals and cumulative percentages with SUM() OVER (ORDER BY ...)</li>
+        <li>Understand PARTITION BY as "GROUP BY without collapsing rows"</li>
+      </ul>
+    </div>
+
+    <div class="content-block">
+      <h3>📖 Core Concepts</h3>
+      <div class="topic-grid">
+        <div class="topic">
+          <strong>CTEs (WITH clause)</strong>
+          <div class="detail">Named temporary results. Each CTE is a "paragraph" in your SQL essay. Chain them: raw data → filtered → aggregated → ranked.</div>
+        </div>
+        <div class="topic">
+          <strong>Window functions</strong>
+          <div class="detail">FUNCTION() OVER (PARTITION BY ... ORDER BY ...). Calculates across a "window" of rows without collapsing them. The analyst's power tool.</div>
+        </div>
+        <div class="topic">
+          <strong>LAG / LEAD</strong>
+          <div class="detail">Access previous/next row. LAG(emissions, 1) = "last year's emissions." Foundation of trend analysis.</div>
+        </div>
+        <div class="topic">
+          <strong>Ranking functions</strong>
+          <div class="detail">ROW_NUMBER (no ties), RANK (ties skip), NTILE(4) = quartiles. "Rank power plants within each country by emissions."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sql-block"><span class="lang-tag">SQL — CTE + Window Function: Emissions trend analysis</span>
+<span class="kw">WITH</span> annual_emissions <span class="kw">AS</span> (
+    <span class="kw">SELECT</span>
+        iso3_country,
+        <span class="fn">YEAR</span>(start_time::DATE) <span class="kw">AS</span> year,
+        <span class="fn">SUM</span>(emissions_quantity) <span class="kw">AS</span> total_co2e
+    <span class="kw">FROM</span> country_emissions
+    <span class="kw">WHERE</span> gas = <span class="str">'co2e_100yr'</span>
+      <span class="kw">AND</span> temporal_granularity = <span class="str">'annual'</span>
+      <span class="kw">AND</span> iso3_country <span class="kw">IN</span> (<span class="str">'DNK'</span>,<span class="str">'SWE'</span>,<span class="str">'NOR'</span>,<span class="str">'FIN'</span>)
+    <span class="kw">GROUP BY</span> iso3_country, <span class="fn">YEAR</span>(start_time::DATE)
+),
+
+with_trend <span class="kw">AS</span> (
+    <span class="kw">SELECT</span>
+        *,
+        <span class="fn">LAG</span>(total_co2e) <span class="kw">OVER</span> (
+            <span class="kw">PARTITION BY</span> iso3_country <span class="kw">ORDER BY</span> year
+        ) <span class="kw">AS</span> prev_year,
+        <span class="fn">RANK</span>() <span class="kw">OVER</span> (
+            <span class="kw">PARTITION BY</span> year <span class="kw">ORDER BY</span> total_co2e <span class="kw">DESC</span>
+        ) <span class="kw">AS</span> rank_in_year
+    <span class="kw">FROM</span> annual_emissions
+)
+
+<span class="kw">SELECT</span>
+    iso3_country, year, 
+    <span class="fn">ROUND</span>(total_co2e / <span class="num">1e6</span>, <span class="num">2</span>) <span class="kw">AS</span> co2e_million_tonnes,
+    <span class="fn">ROUND</span>((total_co2e - prev_year) / prev_year * <span class="num">100</span>, <span class="num">1</span>) <span class="kw">AS</span> yoy_change_pct,
+    rank_in_year
+<span class="kw">FROM</span> with_trend
+<span class="kw">ORDER BY</span> year, rank_in_year;</div>
+
+    <div class="exercise-set">
+      <h3>✏️ Exercises</h3>
+
+      <div class="exercise">
+        <span class="diff diff-warm">Warm-up</span>
+        <h4>E4.1 — Refactor with CTEs</h4>
+        <p>Take your E3.5 "European Polluter Leaderboard" query. Rewrite it using CTEs so each step is named and readable: (1) filter emissions, (2) join ownership, (3) aggregate, (4) rank. The final query should read like a short essay.</p>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-warm">Warm-up</span>
+        <h4>E4.2 — Rank Facilities Within Countries</h4>
+        <p>For each Nordic country, rank power plants by their 2023 co2e_100yr emissions. Return only the top 3 per country. Use ROW_NUMBER with PARTITION BY iso3_country. How concentrated are emissions — does the #1 plant dwarf the rest?</p>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-stretch">Stretch</span>
+        <h4>E4.3 — Year-over-Year Emissions Trend</h4>
+        <p>For Denmark's Power sector, calculate annual co2e_100yr emissions and add: previous year's value (LAG), year-over-year change (%), and a 3-year moving average. Which year saw the biggest reduction? Is the trend accelerating or decelerating?</p>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-stretch">Stretch</span>
+        <h4>E4.4 — Cumulative Concentration</h4>
+        <p>For global power emissions in 2023: rank all countries by co2e_100yr, then calculate a cumulative percentage. How many countries account for 80% of global power emissions? This is a Pareto analysis — the kind of insight that shapes climate policy.</p>
+        <div class="hint">SUM(co2e) OVER (ORDER BY co2e DESC) / SUM(co2e) OVER () gives you the running cumulative percentage.</div>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-challenge">Challenge</span>
+        <h4>E4.5 — Decarbonisation Scoreboard</h4>
+        <p>Build a comprehensive query: For every country with >1M tonnes co2e in the Power sector, calculate their 2019 emissions, 2023 emissions, absolute change, percentage change, and rank them by percentage reduction. Include the LAG-based year-over-year trend for each. <em>Who is actually decarbonising their power sector — and who is going backwards?</em> Present results as a "scoreboard" a journalist could publish. Write a 5-sentence summary of your findings.</p>
+        <div class="hint">This combines everything: CTEs, aggregation, window functions, conditional logic, and interpretation. It's the signature query of Phase 1.</div>
+      </div>
+    </div>
+
+    <div class="resources">
+      <h4>Resources</h4>
+      <div class="resource-item"><span class="type">Free</span> Mode Analytics Tutorial — "Window Functions" section (the best free explanation)</div>
+      <div class="resource-item"><span class="type">Drill</span> LeetCode SQL — Medium difficulty, filter for "window function" tag</div>
+      <div class="resource-item"><span class="type">Ref</span> DuckDB docs — Window Functions reference page</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                WEEK 5                   -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="week">
+    <div class="week-header">
+      <div class="week-num">W5</div>
+      <div class="week-title-block">
+        <div class="week-title">Python Data Wrangling & Building the Database</div>
+        <div class="week-hours">10 hours · 4 sessions</div>
+      </div>
+    </div>
+    <p class="week-intro">SQL handles structured data. But the raw Climate TRACE CSVs need cleaning first — inconsistent formats, wide vs long reshaping, multiple files that need combining, encoding edge cases. This week you learn pandas as the bridge between raw downloads and a queryable database.</p>
+
+    <div class="lo-box">
+      <h4>Learning Objectives</h4>
+      <ul class="lo-list">
+        <li>Read Climate TRACE CSVs into pandas DataFrames and audit them (.shape, .dtypes, .describe(), .isnull())</li>
+        <li>Clean: parse dates, fix types, handle NULLs with strategy, standardise column names</li>
+        <li>Merge multiple sector CSVs into a unified emissions table</li>
+        <li>Reshape data with melt (wide → long) and pivot_table (long → wide)</li>
+        <li>Build a complete DuckDB database from cleaned DataFrames — the database you'll use for the rest of the curriculum</li>
+      </ul>
+    </div>
+
+    <div class="content-block">
+      <h3>📖 Core Concepts</h3>
+      <div class="topic-grid">
+        <div class="topic">
+          <strong>The 5-Command Audit</strong>
+          <div class="detail">.shape, .dtypes, .describe(), .isnull().sum(), .head(20). Run these on every new CSV before doing anything else.</div>
+        </div>
+        <div class="topic">
+          <strong>Cleaning patterns</strong>
+          <div class="detail">.str.strip(), pd.to_datetime(), pd.to_numeric(errors='coerce'), .fillna(), .drop_duplicates(). Build a reusable clean() function.</div>
+        </div>
+        <div class="topic">
+          <strong>Combining files</strong>
+          <div class="detail">pd.concat() to stack multiple sector CSVs. pd.merge() for SQL-like JOINs. Use validate='one_to_many' to catch bugs.</div>
+        </div>
+        <div class="topic">
+          <strong>Reshaping</strong>
+          <div class="detail">pd.melt() turns wide tables into long (good for SQL/plotting). .pivot_table() does the reverse. Climate TRACE is already long format — you'll practice both directions.</div>
+        </div>
+        <div class="topic">
+          <strong>SQL ↔ Python</strong>
+          <div class="detail">duckdb.connect() → conn.execute("CREATE TABLE x AS SELECT * FROM df"). Push cleaned DataFrames into DuckDB. Query them with SQL. Best of both worlds.</div>
+        </div>
+        <div class="topic">
+          <strong>Documentation</strong>
+          <div class="detail">Use Jupyter Markdown cells to document every cleaning decision. "I dropped 342 rows where emissions_quantity was NULL because..." Future-you will thank present-you.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sql-block"><span class="lang-tag">Python — Loading and cleaning Climate TRACE</span>
+<span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> duckdb
+<span class="kw">from</span> pathlib <span class="kw">import</span> Path
+
+<span class="cm"># 1. Load all sector emissions_sources CSVs from Denmark download</span>
+data_dir = Path(<span class="str">"climate-trace-denmark"</span>)
+dfs = []
+<span class="kw">for</span> f <span class="kw">in</span> data_dir.glob(<span class="str">"*_emissions_sources.csv"</span>):
+    df = pd.read_csv(f)
+    dfs.append(df)
+    <span class="fn">print</span>(f<span class="str">"{f.name}: {df.shape[0]:,} rows, {df.source_id.nunique():,} sources"</span>)
+
+emissions = pd.concat(dfs, ignore_index=<span class="kw">True</span>)
+
+<span class="cm"># 2. Audit</span>
+<span class="fn">print</span>(emissions.shape, emissions.dtypes)
+<span class="fn">print</span>(emissions.isnull().sum())
+
+<span class="cm"># 3. Clean dates and types</span>
+emissions[<span class="str">"start_time"</span>] = pd.to_datetime(emissions[<span class="str">"start_time"</span>])
+emissions[<span class="str">"end_time"</span>] = pd.to_datetime(emissions[<span class="str">"end_time"</span>])
+emissions[<span class="str">"emissions_quantity"</span>] = pd.to_numeric(
+    emissions[<span class="str">"emissions_quantity"</span>], errors=<span class="str">"coerce"</span>
+)
+
+<span class="cm"># 4. Push to DuckDB — now you can query with SQL</span>
+conn = duckdb.connect(<span class="str">"climate_trace.duckdb"</span>)
+conn.execute(<span class="str">"CREATE TABLE emissions_sources AS SELECT * FROM emissions"</span>)
+
+<span class="cm"># 5. Verify with SQL</span>
+conn.execute(<span class="str">"""
+    SELECT sector, COUNT(DISTINCT source_id) AS sources
+    FROM emissions_sources
+    GROUP BY sector ORDER BY sources DESC
+"""</span>).fetchdf()</div>
+
+    <div class="exercise-set">
+      <h3>✏️ Exercises</h3>
+
+      <div class="exercise">
+        <span class="diff diff-warm">Warm-up</span>
+        <h4>E5.1 — The Five-Command Audit</h4>
+        <p>Load the Power sector <code>emissions_sources.csv</code> into pandas. Run the 5-command audit. Write a paragraph in a Markdown cell: How many rows and columns? What types did pandas infer (any wrong)? Where are the NULLs concentrated? Are capacity and activity mostly empty, or mostly filled?</p>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-warm">Warm-up</span>
+        <h4>E5.2 — Clean and Standardise</h4>
+        <p>Parse start_time and end_time as datetime. Convert emissions_quantity to numeric (handle any non-numeric values). Check: are there duplicate rows (same source_id + gas + start_time)? Build a reusable <code>clean_emissions(df)</code> function that applies all these steps.</p>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-stretch">Stretch</span>
+        <h4>E5.3 — Combine Sector Downloads</h4>
+        <p>Download 3–4 sector packages (Power, Manufacturing, Fossil Fuel Operations, Agriculture). Use pandas to combine all their emissions_sources CSVs into one table. Similarly combine the ownership files and confidence files. Check: do source_ids overlap between sectors? (They shouldn't.) Load all three combined tables into DuckDB.</p>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-stretch">Stretch</span>
+        <h4>E5.4 — Wide Pivot for Reporting</h4>
+        <p>From your DuckDB database, pull Denmark's annual co2e_100yr emissions by sector into pandas. Pivot it into a wide table: rows = sectors, columns = years, values = emissions in million tonnes. Export this as a clean CSV and as an Excel file. This is the "email to your manager" format.</p>
+      </div>
+
+      <div class="exercise">
+        <span class="diff diff-challenge">Challenge</span>
+        <h4>E5.5 — Build the Complete Database</h4>
+        <p>Create a comprehensive <code>climate_trace.duckdb</code> database with: (1) an <code>emissions_sources</code> table (all sectors combined, cleaned), (2) a <code>country_emissions</code> table, (3) an <code>ownership</code> table, (4) a <code>confidence</code> table. Write a Python script (not just a notebook) that downloads, cleans, and loads all four tables. Add a <code>countries</code> reference table with ISO codes, country names, and region groupings. Document everything. This database is your foundation for the next 15 weeks.</p>
+        <div class="hint">For the countries reference table, you can find ISO 3166 CSV files on GitHub. Add a region column (Nordics, EU27, OECD, etc.) — you'll use this constantly for filtering.</div>
+      </div>
+    </div>
+
+    <div class="resources">
+      <h4>Resources</h4>
+      <div class="resource-item"><span class="type">Free</span> Kaggle Learn — Pandas micro-course (4 hours, hands-on)</div>
+      <div class="resource-item"><span class="type">Free</span> DuckDB docs — "Python Client" section (creating tables from DataFrames)</div>
+      <div class="resource-item"><span class="type">Ref</span> pandas documentation — "10 Minutes to pandas" (official tutorial)</div>
+      <div class="resource-item"><span class="type">Data</span> climatetrace.org/data — Download Power, Manufacturing, Fossil Fuels, Agriculture sectors</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            PHASE 1 PROJECT              -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="project">
+    <h3>🎯 Phase 1 Portfolio Project: "Denmark's Emissions Profile"</h3>
+    <p>Combine everything into a single publishable project that tells the story of Denmark's greenhouse gas emissions through data.</p>
+    <p>Using your <code>climate_trace.duckdb</code> database, answer these five questions with documented SQL queries and brief written interpretations:</p>
+    <p style="padding-left: 16px; border-left: 2px solid var(--accent-light); margin: 12px 0;">
+      <strong>Q1.</strong> What is Denmark's emissions profile by sector? How does it compare to Sweden and Germany?<br>
+      <strong>Q2.</strong> Which individual facilities are Denmark's top 10 emitters — and who owns them?<br>
+      <strong>Q3.</strong> How have Denmark's power sector emissions changed from 2015 to 2024? Quantify the trend.<br>
+      <strong>Q4.</strong> How confident should we be in the data? What percentage of Denmark's emissions come from "high" confidence sources?<br>
+      <strong>Q5.</strong> Your own question — something that surprised you during exploration. Document the discovery.
+    </p>
+    <p>All SQL queries should use CTEs and window functions where appropriate. All cleaning steps should be documented in a Jupyter notebook.</p>
+
+    <ul class="deliverables">
+      <li><strong>GitHub repo</strong> — <code>climate-trace-analytics/</code> with: raw data (or download script), cleaning code, SQL queries, README</li>
+      <li><strong>build_database.py</strong> — Script that downloads, cleans, and loads Climate TRACE data into DuckDB</li>
+      <li><strong>cleaning_notebook.ipynb</strong> — Jupyter notebook documenting your data audit and cleaning decisions</li>
+      <li><strong>analysis_queries.sql</strong> — Your 5+ queries, each with a comment block explaining the business question</li>
+      <li><strong>README.md</strong> — Written for a non-technical reader: what you found, why it matters, and how to reproduce it</li>
+    </ul>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--          COMPLETION CRITERIA            -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="milestone">
+    <h3>✅ Phase 1 Completion Criteria</h3>
+    <p>Before moving to Phase 2, honestly assess yourself:</p>
+    <ul class="check-list">
+      <li>Can you write a 30+ line SQL query with CTEs, window functions, and JOINs against Climate TRACE data?</li>
+      <li>Can you explain why filtering by gas type is essential and what happens if you don't?</li>
+      <li>Can you take a new Climate TRACE sector download and load it into your database within 30 minutes?</li>
+      <li>Can you join emissions → ownership → confidence without accidentally multiplying rows?</li>
+      <li>Do you have a GitHub repo with your Denmark emissions project that you'd show an interviewer?</li>
+      <li>Can you name Denmark's top-emitting sectors and facilities from memory?</li>
+    </ul>
+    <p style="margin-top: 16px; opacity: 0.7;">If you're not there yet, repeat exercises. The DuckDB database you built this phase is the foundation for everything that follows.</p>
+  </div>
+
+  <div class="teacher-note" style="margin-top: 32px;">
+    <strong>🧑‍🏫 What's coming in Phase 2</strong>
+    Phase 2 (Analytical Thinking & dbt Workflows) transforms your DuckDB database into a proper analytics warehouse using dbt. You'll build staging → intermediate → mart layers on top of Climate TRACE, add tests and documentation, learn EDA as a discipline, and apply basic statistics to emissions trends. The SQL becomes the language you think in — Phase 2 teaches you what questions to ask.
+  </div>
+
+</div>
+
+</body>
+</html>
