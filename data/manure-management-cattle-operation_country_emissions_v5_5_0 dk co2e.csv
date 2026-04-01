@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,agriculture,manure-management-cattle-operation,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,2665939.824740455,tonnes,annual,2023-10-03 21:10:36.256423,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-management-cattle-operation,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,2705155.765067611,tonnes,annual,2023-10-03 21:10:36.360194,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-management-cattle-operation,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,2729110.7321806476,tonnes,annual,2023-10-03 21:10:36.466076,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-management-cattle-operation,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,3174276.859080128,tonnes,annual,2023-10-03 21:10:36.574989,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-management-cattle-operation,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,3240100.8797362954,tonnes,annual,2023-10-03 21:10:36.682224,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-management-cattle-operation,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,3350131.1161165745,tonnes,annual,2023-10-03 21:10:36.793983,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-management-cattle-operation,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,3254300.639009417,tonnes,annual,2023-10-03 21:10:36.896683,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-management-cattle-operation,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,3250107.2975989482,tonnes,annual,2023-10-03 21:10:37.001918,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-management-cattle-operation,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,3250079.959588082,tonnes,annual,2024-07-02 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-management-cattle-operation,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,3244822.229791081,tonnes,annual,2025-09-09 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-management-cattle-operation,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,3244822.229791172,tonnes,annual,2025-09-09 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-management-cattle-operation,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,205214.39502258098,tonnes,annual,2025-09-09 00:00:00,2026-03-14 20:46:08.333882

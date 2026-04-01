@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,agriculture,synthetic-fertilizer-application,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,862972.6433155853,tonnes,annual,2025-05-06 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,synthetic-fertilizer-application,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,885753.1409668182,tonnes,annual,2025-05-06 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,synthetic-fertilizer-application,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,950511.9550329912,tonnes,annual,2025-05-06 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,synthetic-fertilizer-application,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,840810.3372611194,tonnes,annual,2025-05-06 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,synthetic-fertilizer-application,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,990962.6307135089,tonnes,annual,2025-05-06 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,synthetic-fertilizer-application,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,919862.8411132889,tonnes,annual,2025-05-06 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,synthetic-fertilizer-application,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,1039268.2765019923,tonnes,annual,2025-05-06 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,synthetic-fertilizer-application,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,819130.5692746192,tonnes,annual,2025-05-06 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,synthetic-fertilizer-application,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,797986.8725275747,tonnes,annual,2025-05-06 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,synthetic-fertilizer-application,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,798056.5230487059,tonnes,annual,2025-03-03 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,synthetic-fertilizer-application,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,797988.7860198026,tonnes,annual,2025-12-08 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,synthetic-fertilizer-application,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,66495.11105214247,tonnes,annual,2025-09-29 00:00:00,2026-03-14 20:46:08.333882

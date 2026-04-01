@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,forestry-and-land-use,net-wetland,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,22911.026035998297,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-wetland,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,-134725.5470699983,tonnes,annual,2023-10-03 21:10:31.66333,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-wetland,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,266029.5313899973,tonnes,annual,2023-10-03 21:10:31.841029,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-wetland,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,-194836.43268999807,tonnes,annual,2023-10-03 21:10:31.996924,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-wetland,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,59691.35923399988,tonnes,annual,2023-10-03 21:10:32.174068,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-wetland,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,85866.20158599697,tonnes,annual,2023-10-03 21:10:32.355233,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-wetland,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,-229463.1638599977,tonnes,annual,2023-10-03 21:10:32.547863,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-wetland,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,19438.874169999806,tonnes,annual,2023-10-03 21:10:32.751119,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-wetland,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,-154746.7260399994,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-wetland,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-wetland,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-wetland,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882

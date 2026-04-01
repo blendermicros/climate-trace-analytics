@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,waste,biological-treatment-of-solid-waste-and-biogenic,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,146335.76288999993,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,waste,biological-treatment-of-solid-waste-and-biogenic,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,150288.44195699994,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,waste,biological-treatment-of-solid-waste-and-biogenic,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,165895.24258799994,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,waste,biological-treatment-of-solid-waste-and-biogenic,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,165007.307871,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,waste,biological-treatment-of-solid-waste-and-biogenic,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,172053.67851899995,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,waste,biological-treatment-of-solid-waste-and-biogenic,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,166465.20904199994,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,waste,biological-treatment-of-solid-waste-and-biogenic,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,166518.23805899994,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,waste,biological-treatment-of-solid-waste-and-biogenic,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,166221.43948799997,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,waste,biological-treatment-of-solid-waste-and-biogenic,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,166542.49933199995,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,waste,biological-treatment-of-solid-waste-and-biogenic,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,166864.17935699993,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,waste,biological-treatment-of-solid-waste-and-biogenic,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,166864.17935699993,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,waste,biological-treatment-of-solid-waste-and-biogenic,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,13905.348279749993,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882

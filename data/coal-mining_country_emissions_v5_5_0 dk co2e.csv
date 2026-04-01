@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,fossil-fuel-operations,coal-mining,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:35.897937,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,coal-mining,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:36.039913,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,coal-mining,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:36.178678,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,coal-mining,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:36.327895,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,coal-mining,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:36.467215,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,coal-mining,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:36.624096,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,coal-mining,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:36.846295,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,coal-mining,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:37.004586,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,coal-mining,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:37.004586,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,coal-mining,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:37.004586,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,coal-mining,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:37.004586,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,coal-mining,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:37.004586,2026-03-14 20:46:08.333882

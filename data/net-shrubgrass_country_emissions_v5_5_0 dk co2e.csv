@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,forestry-and-land-use,net-shrubgrass,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,54249.991617998625,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-shrubgrass,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,-128017.20761699766,tonnes,annual,2023-10-03 21:10:34.790836,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-shrubgrass,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,199744.08597099772,tonnes,annual,2023-10-03 21:10:34.92286,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-shrubgrass,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,-234241.9820829966,tonnes,annual,2023-10-03 21:10:35.05683,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-shrubgrass,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,92009.75795299861,tonnes,annual,2023-10-03 21:10:35.189551,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-shrubgrass,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,79886.28113699662,tonnes,annual,2023-10-03 21:10:35.32275,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-shrubgrass,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,-42296.6595429982,tonnes,annual,2023-10-03 21:10:35.458836,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-shrubgrass,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,-67064.1537959993,tonnes,annual,2023-10-03 21:10:35.596956,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-shrubgrass,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,-60048.5105779995,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-shrubgrass,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-shrubgrass,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-shrubgrass,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882

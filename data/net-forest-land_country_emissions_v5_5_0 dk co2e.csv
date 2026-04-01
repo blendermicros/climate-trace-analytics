@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,forestry-and-land-use,net-forest-land,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,6869193.525299996,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-forest-land,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,-9745184.148399992,tonnes,annual,2023-10-03 21:10:31.556294,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-forest-land,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,3222429.994399996,tonnes,annual,2023-10-03 21:10:31.736495,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-forest-land,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,-3042421.917400002,tonnes,annual,2023-10-03 21:10:31.90077,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-forest-land,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,267611.71080000163,tonnes,annual,2023-10-03 21:10:32.091837,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-forest-land,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,3241449.210499997,tonnes,annual,2023-10-03 21:10:32.256931,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-forest-land,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,-3394160.1117999963,tonnes,annual,2023-10-03 21:10:32.424166,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-forest-land,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,1940621.9831999955,tonnes,annual,2023-10-03 21:10:32.628245,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-forest-land,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,183837.72030000223,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-forest-land,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-forest-land,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,net-forest-land,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882

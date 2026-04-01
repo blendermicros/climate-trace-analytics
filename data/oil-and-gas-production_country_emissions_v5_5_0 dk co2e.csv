@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,fossil-fuel-operations,oil-and-gas-production,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,2892410.472262615,tonnes,annual,2025-06-10 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-production,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,2609720.9285168694,tonnes,annual,2025-06-10 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-production,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,2511588.130749269,tonnes,annual,2025-06-10 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-production,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,2114664.225584894,tonnes,annual,2025-06-10 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-production,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,1857418.6513876473,tonnes,annual,2025-06-10 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-production,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,1179336.6580175254,tonnes,annual,2025-06-10 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-production,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,1085113.7640886337,tonnes,annual,2025-06-10 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-production,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,1084173.2058658137,tonnes,annual,2025-06-10 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-production,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,1010580.9146076301,tonnes,annual,2025-06-10 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-production,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,1317181.0280313727,tonnes,annual,2025-06-10 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-production,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,1621921.7405066986,tonnes,annual,2025-10-06 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-production,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,114594.74943872943,tonnes,annual,2025-06-10 00:00:00,2026-03-14 20:46:08.333882

@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,agriculture,manure-applied-to-soils,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,750692.574990456,tonnes,annual,2025-05-07 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-applied-to-soils,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,749665.0734961918,tonnes,annual,2025-05-07 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-applied-to-soils,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,750917.0612575603,tonnes,annual,2025-05-07 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-applied-to-soils,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,758931.4340153639,tonnes,annual,2025-05-07 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-applied-to-soils,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,762048.1760106082,tonnes,annual,2025-05-07 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-applied-to-soils,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,785659.8073397242,tonnes,annual,2025-05-07 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-applied-to-soils,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,773062.4234504029,tonnes,annual,2025-05-07 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-applied-to-soils,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,714666.2094553951,tonnes,annual,2025-05-07 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-applied-to-soils,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,754213.2293126341,tonnes,annual,2025-05-07 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-applied-to-soils,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,753881.6481051533,tonnes,annual,2025-05-07 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-applied-to-soils,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,753550.0627884669,tonnes,annual,2025-12-08 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-applied-to-soils,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,62792.1613960401,tonnes,annual,2025-10-20 00:00:00,2026-03-14 20:46:08.333882

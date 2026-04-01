@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,buildings,residential-onsite-fuel-usage,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,3789121.4554128353,tonnes,annual,2025-08-28 00:00:00,2026-03-14 20:46:08.333882
+DNK,buildings,residential-onsite-fuel-usage,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,3839151.4602616355,tonnes,annual,2025-08-28 00:00:00,2026-03-14 20:46:08.333882
+DNK,buildings,residential-onsite-fuel-usage,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,3751183.0717478367,tonnes,annual,2025-08-28 00:00:00,2026-03-14 20:46:08.333882
+DNK,buildings,residential-onsite-fuel-usage,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,3666439.074329181,tonnes,annual,2025-08-28 00:00:00,2026-03-14 20:46:08.333882
+DNK,buildings,residential-onsite-fuel-usage,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,3518621.8555213306,tonnes,annual,2025-08-28 00:00:00,2026-03-14 20:46:08.333882
+DNK,buildings,residential-onsite-fuel-usage,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,3387742.6227818574,tonnes,annual,2025-08-28 00:00:00,2026-03-14 20:46:08.333882
+DNK,buildings,residential-onsite-fuel-usage,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,3410424.40018,tonnes,annual,2025-08-28 00:00:00,2026-03-14 20:46:08.333882
+DNK,buildings,residential-onsite-fuel-usage,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,3169551.189142,tonnes,annual,2025-08-28 00:00:00,2026-03-14 20:46:08.333882
+DNK,buildings,residential-onsite-fuel-usage,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,3130895.023462001,tonnes,annual,2025-08-28 00:00:00,2026-03-14 20:46:08.333882
+DNK,buildings,residential-onsite-fuel-usage,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,3135338.0063999994,tonnes,annual,2025-08-28 00:00:00,2026-03-14 20:46:08.333882
+DNK,buildings,residential-onsite-fuel-usage,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,3152847.198354,tonnes,annual,2026-02-02 00:00:00,2026-03-14 20:46:08.333882
+DNK,buildings,residential-onsite-fuel-usage,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,380155.282894,tonnes,annual,2026-02-27 00:00:00,2026-03-14 20:46:08.333882

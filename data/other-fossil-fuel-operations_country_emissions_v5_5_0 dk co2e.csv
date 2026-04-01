@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,fossil-fuel-operations,other-fossil-fuel-operations,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,other-fossil-fuel-operations,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,other-fossil-fuel-operations,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,other-fossil-fuel-operations,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,other-fossil-fuel-operations,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,other-fossil-fuel-operations,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,other-fossil-fuel-operations,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,10600.330392073743,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,other-fossil-fuel-operations,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,30602.06487644758,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,other-fossil-fuel-operations,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,74151.14233644739,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,other-fossil-fuel-operations,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,16857.674494040748,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,other-fossil-fuel-operations,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,16857.674494040748,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,other-fossil-fuel-operations,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,1404.8062078367288,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882

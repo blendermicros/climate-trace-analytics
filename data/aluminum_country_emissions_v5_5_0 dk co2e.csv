@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,manufacturing,aluminum,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-12 17:27:07.481452,2026-03-14 20:46:08.333882
+DNK,manufacturing,aluminum,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-12 17:27:07.625497,2026-03-14 20:46:08.333882
+DNK,manufacturing,aluminum,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-12 17:27:07.778117,2026-03-14 20:46:08.333882
+DNK,manufacturing,aluminum,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-12 17:27:07.933839,2026-03-14 20:46:08.333882
+DNK,manufacturing,aluminum,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-12 17:27:08.085506,2026-03-14 20:46:08.333882
+DNK,manufacturing,aluminum,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-12 17:27:08.230993,2026-03-14 20:46:08.333882
+DNK,manufacturing,aluminum,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-12 17:27:08.376457,2026-03-14 20:46:08.333882
+DNK,manufacturing,aluminum,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-12 17:27:08.523996,2026-03-14 20:46:08.333882
+DNK,manufacturing,aluminum,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-12 17:27:08.679014,2026-03-14 20:46:08.333882
+DNK,manufacturing,aluminum,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-17 00:00:00,2026-03-14 20:46:08.333882
+DNK,manufacturing,aluminum,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-17 00:00:00,2026-03-14 20:46:08.333882
+DNK,manufacturing,aluminum,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-17 00:00:00,2026-03-14 20:46:08.333882

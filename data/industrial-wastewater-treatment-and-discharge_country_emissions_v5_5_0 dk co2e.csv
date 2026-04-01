@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,waste,industrial-wastewater-treatment-and-discharge,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,380618.7916944878,tonnes,annual,2024-09-16 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,industrial-wastewater-treatment-and-discharge,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,380761.17054297053,tonnes,annual,2024-09-16 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,industrial-wastewater-treatment-and-discharge,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,366086.1631824579,tonnes,annual,2024-09-16 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,industrial-wastewater-treatment-and-discharge,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,381700.7704799165,tonnes,annual,2024-09-16 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,industrial-wastewater-treatment-and-discharge,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,364086.2915916598,tonnes,annual,2024-09-16 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,industrial-wastewater-treatment-and-discharge,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,380376.711784115,tonnes,annual,2024-09-16 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,industrial-wastewater-treatment-and-discharge,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,415391.4235939992,tonnes,annual,2024-09-16 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,industrial-wastewater-treatment-and-discharge,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,389728.4316269671,tonnes,annual,2024-09-16 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,industrial-wastewater-treatment-and-discharge,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,389728.43162696715,tonnes,annual,2024-08-14 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,industrial-wastewater-treatment-and-discharge,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,389728.43162696715,tonnes,annual,2025-02-19 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,industrial-wastewater-treatment-and-discharge,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,389728.4316269671,tonnes,annual,2026-01-30 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,industrial-wastewater-treatment-and-discharge,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,33100.222960098574,tonnes,annual,2025-02-19 00:00:00,2026-03-14 20:46:08.333882

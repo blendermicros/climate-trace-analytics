@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,agriculture,enteric-fermentation-cattle-pasture,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,758210.0615117531,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,enteric-fermentation-cattle-pasture,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,715898.2803157804,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,enteric-fermentation-cattle-pasture,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,719888.0163342594,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,enteric-fermentation-cattle-pasture,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,667290.963090649,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,enteric-fermentation-cattle-pasture,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,672008.3221124982,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,enteric-fermentation-cattle-pasture,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,691020.6692005564,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,enteric-fermentation-cattle-pasture,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,664431.957,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,enteric-fermentation-cattle-pasture,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,656755.5381299998,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,enteric-fermentation-cattle-pasture,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,634969.9449899998,tonnes,annual,2024-09-13 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,enteric-fermentation-cattle-pasture,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,623588.382,tonnes,annual,2025-09-17 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,enteric-fermentation-cattle-pasture,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,623588.382,tonnes,annual,2025-09-17 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,enteric-fermentation-cattle-pasture,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,51965.6985,tonnes,annual,2025-09-17 00:00:00,2026-03-14 20:46:08.333882

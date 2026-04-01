@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,waste,domestic-wastewater-treatment-and-discharge,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,551342.2722939147,tonnes,annual,2024-07-17 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,domestic-wastewater-treatment-and-discharge,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,555738.4987791433,tonnes,annual,2024-08-13 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,domestic-wastewater-treatment-and-discharge,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,556436.9020289523,tonnes,annual,2024-07-17 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,domestic-wastewater-treatment-and-discharge,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,557801.4430171455,tonnes,annual,2024-07-17 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,domestic-wastewater-treatment-and-discharge,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,558442.1239861014,tonnes,annual,2024-07-17 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,domestic-wastewater-treatment-and-discharge,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,560226.7581198725,tonnes,annual,2024-08-13 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,domestic-wastewater-treatment-and-discharge,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,559811.832108494,tonnes,annual,2024-07-17 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,domestic-wastewater-treatment-and-discharge,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,562667.3926771135,tonnes,annual,2024-07-17 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,domestic-wastewater-treatment-and-discharge,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,567010.6568126869,tonnes,annual,2024-07-17 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,domestic-wastewater-treatment-and-discharge,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,572915.7805585079,tonnes,annual,2025-05-05 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,domestic-wastewater-treatment-and-discharge,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,575818.0143421866,tonnes,annual,2026-02-04 00:00:00,2026-03-14 20:46:08.333882
+DNK,waste,domestic-wastewater-treatment-and-discharge,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,48772.5526406812,tonnes,annual,2025-02-19 00:00:00,2026-03-14 20:46:08.333882

@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,forestry-and-land-use,forest-land-degradation,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:31.245552,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-degradation,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:31.416803,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-degradation,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:31.570806,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-degradation,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:31.72732,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-degradation,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:31.89075,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-degradation,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:32.044437,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-degradation,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:32.202904,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-degradation,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:32.3738,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-degradation,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-degradation,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2025-03-05 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-degradation,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2026-02-13 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-degradation,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2025-06-02 00:00:00,2026-03-14 20:46:08.333882

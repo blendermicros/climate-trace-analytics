@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,agriculture,manure-left-on-pasture-cattle,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,266935.77370626334,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-left-on-pasture-cattle,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,252039.40815113403,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-left-on-pasture-cattle,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,253444.07148636223,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-left-on-pasture-cattle,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,234926.78906707384,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-left-on-pasture-cattle,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,236587.64946344096,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-left-on-pasture-cattle,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,243281.07406089015,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-left-on-pasture-cattle,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,233920.1711999998,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-left-on-pasture-cattle,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,231217.61987999995,tonnes,annual,2023-10-18 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-left-on-pasture-cattle,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,223547.81034,tonnes,annual,2024-09-13 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-left-on-pasture-cattle,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,219540.77288999996,tonnes,annual,2025-09-17 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-left-on-pasture-cattle,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,219540.77288999996,tonnes,annual,2025-09-17 00:00:00,2026-03-14 20:46:08.333882
+DNK,agriculture,manure-left-on-pasture-cattle,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,18295.064407499987,tonnes,annual,2025-09-17 00:00:00,2026-03-14 20:46:08.333882

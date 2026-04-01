@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,mineral-extraction,bauxite-mining,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:31.448629,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,bauxite-mining,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:31.449185,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,bauxite-mining,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:31.44983,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,bauxite-mining,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:31.450382,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,bauxite-mining,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:31.450947,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,bauxite-mining,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:31.451579,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,bauxite-mining,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:31.452121,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,bauxite-mining,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2023-10-03 21:10:31.453065,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,bauxite-mining,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-26 00:00:00,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,bauxite-mining,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2025-10-27 00:00:00,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,bauxite-mining,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2025-10-27 00:00:00,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,bauxite-mining,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2025-10-27 00:00:00,2026-03-14 20:46:08.333882

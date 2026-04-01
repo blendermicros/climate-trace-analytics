@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,fossil-fuel-operations,oil-and-gas-refining,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,1940509.0413870213,tonnes,annual,2023-10-03 21:12:43.293689,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-refining,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,1850043.6528252906,tonnes,annual,2023-10-03 21:12:43.457292,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-refining,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,1980393.8104174596,tonnes,annual,2023-10-03 21:12:43.610975,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-refining,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,1997497.7437799198,tonnes,annual,2023-10-03 21:12:43.760957,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-refining,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,2015955.5713464234,tonnes,annual,2023-10-03 21:12:43.9133,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-refining,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,1873694.0329090462,tonnes,annual,2023-10-03 21:12:44.072205,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-refining,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,1975793.187847559,tonnes,annual,2023-10-03 21:12:44.225812,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-refining,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,1901851.4725183947,tonnes,annual,2023-10-03 21:12:44.379714,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-refining,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,1964349.9223814274,tonnes,annual,2024-08-01 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-refining,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,1839389.5458395767,tonnes,annual,2026-03-02 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-refining,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,1846991.9817852152,tonnes,annual,2026-02-02 00:00:00,2026-03-14 20:46:08.333882
+DNK,fossil-fuel-operations,oil-and-gas-refining,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,156293.93860505987,tonnes,annual,2026-03-02 00:00:00,2026-03-14 20:46:08.333882

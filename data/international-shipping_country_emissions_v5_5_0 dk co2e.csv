@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,transportation,international-shipping,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,1053758.4622208765,tonnes,annual,2024-08-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-shipping,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,1168660.7611450541,tonnes,annual,2024-08-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-shipping,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,1330067.3933854813,tonnes,annual,2024-08-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-shipping,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,1444378.5903830163,tonnes,annual,2024-08-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-shipping,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,1450527.5578458924,tonnes,annual,2024-08-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-shipping,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,1321850.8200504372,tonnes,annual,2024-08-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-shipping,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,1460444.090079607,tonnes,annual,2024-08-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-shipping,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,1867845.4860188898,tonnes,annual,2024-08-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-shipping,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,1716150.2882318003,tonnes,annual,2024-08-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-shipping,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,1495372.106624963,tonnes,annual,2025-02-21 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-shipping,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,1649603.5390529726,tonnes,annual,2026-01-13 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-shipping,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,99393.30405377586,tonnes,annual,2025-02-21 00:00:00,2026-03-14 20:46:08.333882

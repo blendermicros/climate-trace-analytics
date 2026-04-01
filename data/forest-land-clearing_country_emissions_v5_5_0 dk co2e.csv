@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,forestry-and-land-use,forest-land-clearing,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,658118.0735045307,tonnes,annual,2023-10-03 21:10:31.289087,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-clearing,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,1240253.7387695252,tonnes,annual,2023-10-03 21:10:31.435532,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-clearing,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,1222648.2340350137,tonnes,annual,2023-10-03 21:10:31.582192,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-clearing,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,855642.8744018065,tonnes,annual,2023-10-03 21:10:31.752019,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-clearing,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,2751087.4689285015,tonnes,annual,2023-10-03 21:10:31.917425,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-clearing,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,975001.4931887664,tonnes,annual,2023-10-03 21:10:32.079812,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-clearing,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,1481891.4186450006,tonnes,annual,2023-10-03 21:10:32.242466,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-clearing,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,1062311.8260132498,tonnes,annual,2023-10-03 21:10:32.405948,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-clearing,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,1278920.3704330008,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-clearing,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,789291.8326455846,tonnes,annual,2025-03-05 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-clearing,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,1500281.077347079,tonnes,annual,2026-02-13 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,forest-land-clearing,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2025-06-02 00:00:00,2026-03-14 20:46:08.333882

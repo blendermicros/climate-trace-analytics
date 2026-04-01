@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,mineral-extraction,other-mining-quarrying,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,118406.04842555625,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,other-mining-quarrying,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,119976.95032473071,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,other-mining-quarrying,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,115740.10313786715,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,other-mining-quarrying,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,129214.17767439662,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,other-mining-quarrying,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,136437.8647339198,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,other-mining-quarrying,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,145644.21935335512,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,other-mining-quarrying,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,220060.93978008485,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,other-mining-quarrying,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,248061.71575934126,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,other-mining-quarrying,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,234488.821426859,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,other-mining-quarrying,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,234488.82142685904,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,other-mining-quarrying,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,234488.82142685904,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882
+DNK,mineral-extraction,other-mining-quarrying,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,19366.604258011488,tonnes,annual,2026-03-09 01:49:45.670085,2026-03-14 20:46:08.333882

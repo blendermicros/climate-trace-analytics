@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,transportation,international-aviation,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,2434411.543610368,tonnes,annual,2025-05-05 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-aviation,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,2646467.908903631,tonnes,annual,2025-05-05 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-aviation,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,2685411.074728726,tonnes,annual,2025-05-05 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-aviation,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,2898756.8314216603,tonnes,annual,2025-05-05 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-aviation,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,2883030.9969443358,tonnes,annual,2025-05-05 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-aviation,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,1003779.6187478299,tonnes,annual,2025-05-05 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-aviation,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,1002095.1796065372,tonnes,annual,2025-05-05 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-aviation,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,1907702.1432228119,tonnes,annual,2025-05-05 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-aviation,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,2269096.3846047097,tonnes,annual,2024-07-03 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-aviation,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,2475976.2912103995,tonnes,annual,2025-03-05 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-aviation,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,2599257.8005987736,tonnes,annual,2026-02-02 00:00:00,2026-03-14 20:46:08.333882
+DNK,transportation,international-aviation,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,198749.69583164033,tonnes,annual,2026-03-02 00:00:00,2026-03-14 20:46:08.333882

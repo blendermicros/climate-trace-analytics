@@ -1,0 +1,13 @@
+iso3_country,sector,subsector,start_time,end_time,gas,emissions_quantity,emissions_quantity_units,temporal_granularity,created_date,modified_date
+DNK,forestry-and-land-use,wetland-fires,2015-01-01 00:00:00,2015-12-31 00:00:00,co2e_100yr,5434.4272715,tonnes,annual,2023-10-03 21:10:36.168077,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,wetland-fires,2016-01-01 00:00:00,2016-12-31 00:00:00,co2e_100yr,7738.067885999994,tonnes,annual,2023-10-03 21:10:36.320664,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,wetland-fires,2017-01-01 00:00:00,2017-12-31 00:00:00,co2e_100yr,2205.953341999999,tonnes,annual,2023-10-03 21:10:36.488188,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,wetland-fires,2018-01-01 00:00:00,2018-12-31 00:00:00,co2e_100yr,16529.48026729999,tonnes,annual,2023-10-03 21:10:36.635772,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,wetland-fires,2019-01-01 00:00:00,2019-12-31 00:00:00,co2e_100yr,3459.416134999999,tonnes,annual,2023-10-03 21:10:36.781877,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,wetland-fires,2020-01-01 00:00:00,2020-12-31 00:00:00,co2e_100yr,8606.117477599995,tonnes,annual,2023-10-03 21:10:36.927962,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,wetland-fires,2021-01-01 00:00:00,2021-12-31 00:00:00,co2e_100yr,2468.148736700001,tonnes,annual,2023-10-03 21:10:37.15364,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,wetland-fires,2022-01-01 00:00:00,2022-12-31 00:00:00,co2e_100yr,2468.148736700001,tonnes,annual,2023-10-03 21:10:37.333544,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,wetland-fires,2023-01-01 00:00:00,2023-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2024-09-20 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,wetland-fires,2024-01-01 00:00:00,2024-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2025-03-05 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,wetland-fires,2025-01-01 00:00:00,2025-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2026-02-13 00:00:00,2026-03-14 20:46:08.333882
+DNK,forestry-and-land-use,wetland-fires,2026-01-01 00:00:00,2026-12-31 00:00:00,co2e_100yr,0,tonnes,annual,2025-06-02 00:00:00,2026-03-14 20:46:08.333882
